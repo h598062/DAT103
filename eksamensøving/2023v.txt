@@ -1,0 +1,95 @@
+Oppgave 1
+1.1
+Hvilke av de følgende tillater I/O moduler og hovedminnet å utveksle data direkte?
+	b) DMA
+
+1.2
+Hvilke av de følgende kan forklare hvorfor mer hovedminne (RAM) kan øke datamaskinen sin ytelse?
+	c) Mer RAM kan redusere sannsynligheten for sidefeil
+
+1.3
+Hvilken av de følgende vil bli lagret under et kontekstbytte mellom prosesser
+	d) stack pointer, program counter, CPU register
+
+1.4
+Hvilke av de følgende datastrukturene er generelt brukt av operativsystem for å lagre informasjon knyttet til en prosess?
+	a) Process control block (PCB)
+
+1.5
+En adresse generert av CPUen er vanlegvis omtalt som en ...
+	c) Logical address
+
+1.6
+Hvilke av de følgende er en fordel med virtuelt minne?
+	d) a + b + c
+	Det tillater utførelse av prosesser som ikke er fullstendig i minnet
+	Det abstraherer hovedminnet til et ekstremt stort logisk minne
+	Det tillater å kjøre program som er større enn fysisk minne
+
+1.7
+Hvilken trådmodell tillater alle tråder å kjøre på same tid, og samtidig alle CPU-kjerner å bli utnyttet på same tid?
+	a) En-til-en
+
+1.8
+Hva er en kjernetråd?
+	a) En virtuell CPU som bruker-tråder er tilordnet
+
+1.9
+Hvorfor spiller det noen rolle at mobiltelefonen din er en Von Neumann-maskin?
+	b) Det gjør det mulig å installere program fra app-butikker
+
+1.10
+Hva er eksternt minne?
+	c) Lagring som som ikke kan adresseres direkte fra CPU
+
+1.11
+Hva av de følgende er er riktig om en databuss?
+	a) Den har mulighet til å forbinde mer enn to enheter i et datasystem
+
+1.12
+Hva av det følgende er riktig om CPU?
+	d) En datamaskin kan ha flere CPU-brikker med flere kjerner hver
+
+
+Oppgave 2
+2.1
+Ta utgangspunkt i et datasystem som bruker 16-bit logisk adresse. Hva er størrelsen på det logiske adresserommet?
+	2^16 = 65536 = 64Kb
+
+2.2
+Ta utgangspunkt i et datasystem som støtter “paging” maskinvare med en “translation look-aside buffer” (TLB). Anta en prosess som har noen av sine forespurte sider i fysisk minne. Sidetabellen for prosessen trenger å bli oppdatert når det det er en sidefeil. Anta videre at prosessen forsøker å få tilgang til en side.
+	a) Ta utgangspunkt i et datasystem som støtter “paging” maskinvare med en “translation look-aside buffer” (TLB). Anta en prosess som har noen av sine forespurte sider i fysisk minne. Sidetabellen for prosessen trenger å bli oppdatert når det det er en sidefeil. Anta videre at prosessen forsøker å få tilgang til en side.
+		en (for å hente siden)
+
+	b) Hvor mange minnetilganger er nødvendig for å hente siden om sidenummeret ikke er funne i TLB og det det ikke er en sidefeil?
+		To (en for å sjekke page nummer i page table, og en for å hente fra minnet)
+
+	c) Hvor mange tilganger til “backing store” er nødvendig om det er en sidefeil og offersiden er skitten?
+		To (one for paging out the dirty page, and one for paging in the requested page)
+
+	d) Når en prosess bruker mer tid på “paging” enn utføring, så sier vi at prosessen ...
+		Thrashing
+
+2.3
+Forklar forskjellene og likhetene mellom prosesser og tråder.
+	En tråd deler resurser med forelder prosessen, mens prosesser er seperate. En child tråd kan lese og skrive til samme minnet som forelder prosessen, men en child prosess kan ikke gjøre dette.
+
+2.4 
+Du har nettopp startet en ny prosess ved å bruke fork systemkallet. Hvordan kan du vite om du nå kjører i forelder eller barne-prosessen?
+	fork systemkallet returnerer 0 for child prosesser, mens PID til den nye child prosessen for forelder prosessen.
+
+2.5
+Hva betyr det at en tråd-modell er en-til-en? Hvilke andre modeller er mulige? Forklar.
+	en-til-en:
+	en-til-mange:
+	mange-til-en:
+	mange-til-mange:
+
+
+Oppgave 3
+3.1
+Ta utgangspunkt i at B0, B2, B4, B6 and B8 er tilordnet til C0, og B1, B3, B5, B7 og at B9 er tilordnet til C1 hvor Bi refererer til i. blokk i hovedminnet og Cj refererer til j. cache-linje. Anta at B1 og B4 er i cache. Hva er antall “cache misses” om B8, B4, B1, B8, B1 har tilgang i den viste rekkefølgen? Rettferdiggjør svaret ditt ved å vise hvilke tilganger som førte til “cache miss”.
+
+
+
+	
